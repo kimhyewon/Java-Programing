@@ -2,7 +2,6 @@ package firstMission;
 
 
 public class BirthDayTest {
-//2000년 2월 29일 (유효함) 2014 년 7월 10일 (유효함) 2100년 2월 29일 (유효하지 않음)
 	public static void main(String[] args) {
 		BirthDay d1 = new BirthDay(29, 2, 2000);
 		boolean result1 = d1.checkValidate();
