@@ -1,0 +1,19 @@
+package first;
+
+public class DogTest {
+
+	public static void main(String[] args) {
+
+		Dog myDog = new Dog();
+		myDog.name = "멍멍이";
+		myDog.age = 2;
+		
+		Dog yourDog = new Dog();
+		yourDog.name = "깨끔이";
+		yourDog.age = 1;
+		
+		System.out.println(myDog.name);
+		System.out.println(yourDog.age);
+	}
+
+}

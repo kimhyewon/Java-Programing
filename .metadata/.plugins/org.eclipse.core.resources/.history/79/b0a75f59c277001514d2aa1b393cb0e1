@@ -1,0 +1,215 @@
+package first;
+
+public class BirthDay {
+	private int day;
+	private int month;
+	private int year;
+	
+	public BirthDay(int day, int month, int year) {
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+	
+	public int getDay() {
+		return day;
+	}
+	
+	public int getMonth() {
+		return month;
+	}
+	
+	public int getYear() {
+		return year;
+	}
+	
+	public boolean checkDay() {
+		if(day >= 1 && day <= 31) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkMonth() {
+		if(month >= 1 && month <= 12) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkYear() {
+		if(year >= 0 && year <= 2015) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkMonthyNumOfDay() { 	// 31일인 달은 true, 아니면 false 
+		if(month <= 7 && month % 2 == 1 || month >= 8 && month % 2 == 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkLeapYear() {	// 윤년이면 true, 아니면 false
+		if(year % 4 == 0 && year % 100 != 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkValidate() {
+		
+		System.out.println(checkDay());
+		System.out.println(checkMonth());
+		System.out.println(checkYear());
+		System.out.println(checkMonthyNumOfDay());
+		
+		System.out.println("hi");
+		System.out.println(checkLeapYear());
+		
+		System.out.println(year);
+		System.out.println(month);
+		System.out.println(day);
+		
+		if(!checkDay()) return false;
+		if(!checkMonth()) return false;
+		if(!checkYear()) return false;
+		
+		if(!checkMonthyNumOfDay() && day == 31) {
+			return false;
+		}
+		
+		if(!checkLeapYear() && month == 2 && day == 29) {
+			return false;
+		}
+		
+		return true;
+	}
+}
+
+
+
+//package birthday;
+//
+//package birthday;
+//
+//public class BirthDay {
+//	private int year;
+//	private int month;
+//	private int day;
+//	
+//	public BirthDay(int year, int month, int day) {
+//		this.year = year;
+//		this.month = month;
+//		this.day = day;
+//	}
+//	
+//	boolean isValidDate(BirthDay birthDay) {
+//		boolean isValidMonth = false;
+//		boolean isValidDay = false;
+//		boolean isMonthOf31days = false;
+//		boolean isLeapYear = false;
+//		
+//		isValidMonth = checkMonth(birthDay.month);
+//		isValidDay = checkDay(birthDay.day);
+//		isMonthOf31days = checkMonthDay(birthDay.month);
+//		isLeapYear = checkLeapYear(birthDay.year);
+//		
+//		if(!isValidMonth) {
+//			return false;
+//		}
+//		
+//		if(!isValidDay) {
+//			return false;
+//		}
+//		
+//		if(!isMonthOf31days && birthDay.day == 31) {
+//			return false;
+//		}
+//		
+//		if(isLeapYear && birthDay.month ==2 && birthDay.day > 29) {
+//			return false;
+//		}
+//		
+//		if(!isLeapYear && birthDay.month ==2 && birthDay.day > 28) {
+//			return false;
+//		}
+//		
+//		return true;
+//	}
+//	
+//	boolean checkMonth(int month) {
+//		if(month >= 1 && month <= 12) {
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	boolean checkDay(int day) {
+//		if(day >= 28 && day <= 31) {
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	boolean checkMonthDay(int month) { //31일인 달이면 true, 아니면 false 
+//		boolean evenMonth = (month % 2 == 0);
+//		
+//		if(evenMonth && month > 7) {
+//			return true;
+//		}
+//		if(!evenMonth && month < 8) {
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	boolean checkLeapYear(int year) {
+//		if(year % 4 == 0 && year % 100 != 0){
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	private int getYear() {
+//		return year;
+//	}
+//	
+//	private int getMonth() {
+//		return month;
+//	}
+//	
+//	private int getDay() {
+//		return day;
+//	}
+//}
+//
+//
+//public class BirthDayTest {
+//
+//	public static void main(String[] args) {
+//		boolean isValidDate = false;
+//		
+//		BirthDay birth1 = new BirthDay(2000, 2, 29);
+//		isValidDate = birth1.isValidDate(birth1);
+//		printResult(isValidDate);
+//		
+//		BirthDay birth2 = new BirthDay(2014, 7, 10);
+//		isValidDate = birth2.isValidDate(birth2);
+//		printResult(isValidDate);
+//		
+//		BirthDay birth3 = new BirthDay(2100, 2, 29);
+//		isValidDate = birth3.isValidDate(birth3);
+//		printResult(isValidDate);
+//	}
+//	
+//	private static void printResult(boolean isValidDate) {
+//		if(isValidDate == true) {
+//			System.out.println("유효함");
+//		}
+//		else {
+//			System.out.println("유효하지 않음");
+//		}
+//	}
+//}

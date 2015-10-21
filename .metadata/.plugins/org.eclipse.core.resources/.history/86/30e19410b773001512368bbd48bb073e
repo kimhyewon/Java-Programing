@@ -1,0 +1,16 @@
+package first;
+
+public class Person {
+	public int age;
+	public int height;
+	private float weight;
+	private String name;
+	
+	public void setWeight(float w) {
+		weight = w;
+	}
+	
+	public float getWeight() {
+		return weight;
+	}
+}

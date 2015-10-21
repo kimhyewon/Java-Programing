@@ -1,0 +1,9 @@
+package first;
+
+public class BirthDayTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package first;
+
+class Person {
+	private String name;
+	int age;
+	int height;
+	String personelity;
+	String jopType;
+}
+
+public class Dog {
+	
+	String type;
+	int color;
+	int age;
+	private String name;
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+}

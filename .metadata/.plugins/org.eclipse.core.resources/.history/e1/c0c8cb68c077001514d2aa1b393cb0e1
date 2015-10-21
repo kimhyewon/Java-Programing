@@ -1,0 +1,13 @@
+package first;
+
+public class BirthDayTest {
+
+	public static void main(String[] args) {
+		BirthDay d1 = new BirthDay(29, 2, 2000);
+		System.out.println(d1.checkValidate());
+		
+		BirthDay d2 = new BirthDay(1, 13, 2000);
+		System.out.println(d2.checkValidate());
+	}
+
+}

@@ -1,0 +1,22 @@
+package first;
+
+public class CalulatorTest {
+
+	public static void main(String[] args) {
+		Calulator cal = new Calulator();
+		int num1 = 10;
+		int num2 = 2;
+		
+		int addResult = cal.add(num1, num2);
+		int subResult = cal.subtraction(num1, num2);
+		int mulResult = cal.multiply(num1, num2);
+		double divResult = cal.divide(num1, num2);
+		
+		System.out.println(addResult);
+		System.out.println(subResult);
+		System.out.println(mulResult);
+		System.out.println(divResult);
+
+	}
+
+}

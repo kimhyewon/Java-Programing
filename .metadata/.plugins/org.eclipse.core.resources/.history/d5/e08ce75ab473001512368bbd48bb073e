@@ -1,0 +1,17 @@
+package first;
+
+public class CalulatorTest {
+
+	public static void main(String[] args) {
+		Calulator cal = new Calulator();
+		int num1 = 10;
+		int num2 = 2;
+		
+		System.out.println(cal.add(num1, num2));
+		System.out.println(cal.subtraction(num1, num2));
+		System.out.println(cal.multiply(num1, num2));
+		System.out.println(cal.divide(num1, num2));
+
+	}
+
+}
