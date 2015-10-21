@@ -1,4 +1,5 @@
-package first;
+package firstMission;
+
 
 public class BirthDayTest {
 //2000년 2월 29일 (유효함) 2014 년 7월 10일 (유효함) 2100년 2월 29일 (유효하지 않음)

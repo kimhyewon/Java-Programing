@@ -1,4 +1,4 @@
-package first;
+package firstMission;
 
 public class BirthDay {
 	private int day;
